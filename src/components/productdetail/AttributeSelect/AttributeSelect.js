@@ -29,7 +29,8 @@ export default {
   computed: {
     selectedValue: {
       get() {
-        return this.selected[this.id];
+        const data = this.selected[this.id];
+        return Array.isArray(data) ? this.selected.testsize[0].label : data;
       },
       set(value) {
         const sku = this.variantCombinations.find(
