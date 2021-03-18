@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "start": "node server.js",
     "build": "vue-cli-service build",
     "lint": "eslint \"./src/**/*.js\" && eslint --config ./.lintgql.js \"./src/**/*.gql\"",
     "test:unit": "vue-cli-service test:unit",
