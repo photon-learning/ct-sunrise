@@ -6,5 +6,13 @@
       "HTML5",
       "scalpel"
     ],
-    "repository": "https://github.com/photon-learning/ct-sunrise",
+    "repository": "https://github.com/photon-learning/sunrise-spa",
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-static"
+      }
+    ]
   }
