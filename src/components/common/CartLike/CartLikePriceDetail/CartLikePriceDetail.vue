@@ -4,11 +4,11 @@
 
 <template>
   <div v-if="cartLike" class="grand-total-wrap">
-    <h4>{{ $t('cartTotals') }}</h4>
+    <h4>{{ $t("cartTotals") }}</h4>
     <div class="grand-total-content">
       <div class="single-grand-total">
         <div class="single-grand-total-left col-sm-6">
-          <span>{{ $t('subtotal') }}</span>
+          <span>{{ $t("subtotal") }}</span>
         </div>
         <div
           class="single-grand-total-right col-sm-6"
@@ -22,7 +22,7 @@
 
       <div class="single-grand-total">
         <div class="single-grand-total-left col-sm-6">
-          <span>{{ $t('salesTax') }}</span>
+          <span>{{ $t("salesTax") }}</span>
         </div>
         <div
           class="single-grand-total-right col-sm-6"
@@ -60,20 +60,20 @@
     <!-- <a href="#">Calculate shipping</a> -->
     <div class="cart-total-wrap">
       <div class="single-cart-total-left col-sm-6">
-        <b>{{ $t('total') }}</b>
+        <b>{{ $t("total") }}</b>
       </div>
       <div
         class="single-cart-total-right col-sm-6"
         data-test="cart-total-price"
       >
         <b>
-          <BasePrice :price="{value:cartLike.totalPrice}" />
+          <BasePrice :price="total" />
         </b>
       </div>
     </div>
     <div class="grand-btn">
       <router-link :to="{ name: 'checkout' }" data-test="checkout-button">{{
-        $t('checkout')
+        $t("checkout")
       }}</router-link>
     </div>
   </div>
