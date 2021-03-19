@@ -1,5 +1,5 @@
 <script src="./TheFooter.js"></script>
-
+<i18n src="./TheFooter.txt"></i18n>
 <style lang="scss" src="./TheFooter.scss"></style>
 
 <template>
@@ -40,14 +40,20 @@
           <div class="footer-column footer-column-2">
             <div class="footer-widget mb-30">
               <div class="widget-title">
-                <h3>COMPANY</h3>
+                <h3>{{ $t("company") }}</h3>
               </div>
               <div class="footer-list">
                 <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Jobs</a></li>
+                  <li>
+                    <a href="#">{{ $t("aboutUs") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("jobs") }}</a>
+                  </li>
                   <li><a href="#">Press</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li>
+                    <a href="#">{{ $t("contact") }}</a>
+                  </li>
                   <li><a href="#">Blog</a></li>
                 </ul>
               </div>
@@ -56,14 +62,22 @@
           <div class="footer-column footer-column-3">
             <div class="footer-widget mb-30">
               <div class="widget-title">
-                <h3>COMMUNITY</h3>
+                <h3>{{ $t("community") }}</h3>
               </div>
               <div class="footer-list">
                 <ul>
-                  <li><a href="#">Community</a></li>
-                  <li><a href="#">Facebook group</a></li>
-                  <li><a href="#">Forums</a></li>
-                  <li><a href="#">Meetups</a></li>
+                  <li>
+                    <a href="#">{{ $t("community2") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("facebook") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("forums") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("meetup") }}</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -75,9 +89,15 @@
               </div>
               <div class="footer-list">
                 <ul>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">License Agreement</a></li>
+                  <li>
+                    <a href="#">{{ $t("privacy") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("terms") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("license") }}</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -85,14 +105,20 @@
           <div class="footer-column footer-column-5">
             <div class="footer-widget mb-30">
               <div class="widget-title">
-                <h3>PROFILE</h3>
+                <h3>{{ $t("profile") }}</h3>
               </div>
               <div class="footer-list">
                 <ul>
-                  <li><a href="#">My Account</a></li>
+                  <li>
+                    <a href="#">{{ $t("account") }}</a>
+                  </li>
                   <li><a href="#">Checkout</a></li>
-                  <li><a href="#">Order tracking</a></li>
-                  <li><a href="#">Help & Support</a></li>
+                  <li>
+                    <a href="#">{{ $t("tracking") }}</a>
+                  </li>
+                  <li>
+                    <a href="#">{{ $t("help") }}</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -100,7 +126,7 @@
           <div class="footer-column footer-column-6">
             <div class="footer-widget subscribe-right mb-30">
               <div class="widget-title">
-                <h3>JOIN OUR NEWSLETTER</h3>
+                <h3>{{ $t("newsletter") }}</h3>
               </div>
               <div id="mc_embed_signup" class="subscribe-form-2 mt-20">
                 <form class="validate subscribe-form-style" novalidate="">
@@ -109,7 +135,7 @@
                       class="email"
                       type="email"
                       required=""
-                      placeholder="Enter your email address..."
+                      placeholder="$help"
                       name="EMAIL"
                       value=""
                     />

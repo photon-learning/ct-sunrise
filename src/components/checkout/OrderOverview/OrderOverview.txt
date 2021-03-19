@@ -7,6 +7,7 @@
     price: "Price"
     total: "Total"
     subtotal: "Subtotal"
+    salestax: "Sales Tax"
     shipping: "Shipping"
     placeOrder: "Place Order"
   de:
@@ -18,5 +19,6 @@
     price: "Preis"
     total: "Gesamtpreis"
     subtotal: "Zwischensumme"
+    salestax: "Sales Tax"
     shipping: "Vesrsand"
     placeOrder: "Bestellen"

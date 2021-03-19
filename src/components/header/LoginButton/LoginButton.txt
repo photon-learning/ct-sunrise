@@ -1,6 +1,6 @@
 en:
   signIn: "Sign In"
   signOut: "Sign Out"
-de:
-  signIn: "Anmelden"
-  signOut: "Abmelden"
+id:
+  signIn: "Masuk"
+  signOut: "Keluar"
