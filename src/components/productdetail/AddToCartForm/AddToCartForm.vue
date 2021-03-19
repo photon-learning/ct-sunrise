@@ -41,7 +41,7 @@
       </ul>
     </div>
   </BaseForm> -->
-  <div class="product-dec-action-wrap pro-dec-action-2">
+  <div class="product-dec-action-wrap pro-dec-action-2">      
     <div class="quality-cart-wrap">
       <div class="quality-wrap">
         <input
@@ -53,6 +53,10 @@
           data-test="add-to-cart-amount"
           title="Qty">
       </div>
+      <p>test</p>
+      {{
+        isAvailable
+      }}
       <div class="pro-cart-wrap">
         <a
           href="#" @click.prevent="addLineItem"
