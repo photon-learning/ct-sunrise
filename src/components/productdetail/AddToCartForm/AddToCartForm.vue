@@ -53,10 +53,6 @@
           data-test="add-to-cart-amount"
           title="Qty">
       </div>
-      <p>test</p>
-      {{
-        isAvailable
-      }}
       <div class="pro-cart-wrap">
         <a
           href="#" @click.prevent="addLineItem"
