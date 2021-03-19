@@ -21,7 +21,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
+    key: process.env.VUE_APP_GOOGLE_MAPS_API_KEY || "AIzaSyCZCyaBB_CnLuM--DXI2XDH0aCVuZCbMks",
     libraries: 'places', // necessary for places input
     language: locale(this),
   },

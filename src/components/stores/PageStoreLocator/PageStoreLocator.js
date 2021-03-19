@@ -116,8 +116,8 @@ export default {
       distance: 1000,
       label: '1000 mi',
     }, {
-      distance: 3000,
-      label: '3000 mi',
+      distance: 3000000,
+      label: '3000000 mi',
     }],
   }),
   beforeMount() {

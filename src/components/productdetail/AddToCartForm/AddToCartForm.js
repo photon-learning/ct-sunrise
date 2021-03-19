@@ -7,6 +7,7 @@ export const createCartVariables = (component) => ({
   currency: component.$store.state.currency,
   country: component.$store.state.country,
   shippingAddress: { country: component.$store.state.country },
+  inventoryMode: "TrackOnly",
 });
 export const updateCartVariables = (component) => {
   const distributionChannel = component.$store.state.channel ? {
