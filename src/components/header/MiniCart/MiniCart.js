@@ -41,8 +41,11 @@ export default {
     },
     totalPrice,
     nameFromLineItem(lineItem) {
+      return `${lineItem.name}`;
+    },
+    attributenameFromLineItem(lineItem) {
       const attributes = variantAttributes(lineItem?.variant, locale(this));
-      return `${lineItem.name} ${attributes.map(
+      return `${attributes.map(
         ({ name, value }) => `${name}: ${value}`,
       ).join(', ')}`;
     },
