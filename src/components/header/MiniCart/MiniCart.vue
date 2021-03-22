@@ -58,6 +58,7 @@
                     <BasePrice :price="totalPrice(lineItem)"
                   /></span>
                 </div>
+                <div style="padding-right: 15px"></div>
                 <LineItemDeleteForm :lineItemId="lineItem.id" />
               </li>
             </ul>

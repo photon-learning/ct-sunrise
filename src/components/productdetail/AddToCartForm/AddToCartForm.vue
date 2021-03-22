@@ -51,14 +51,12 @@
           maxlength="12"
           v-model="quantity"
           data-test="add-to-cart-amount"
-          title="Qty">
+          title="Qty"
+        />
       </div>
       <div class="pro-cart-wrap">
-        <a
-          href="#" @click.prevent="addLineItem"
-          data-test="add-to-cart-button"
-        >
-          {{$t('addToCart')}}
+        <a href="#" @click.prevent="addLineItem" data-test="add-to-cart-button">
+          {{ $t("addToCart") }}
         </a>
       </div>
     </div>
@@ -67,5 +65,4 @@
       <a title="Add to compare" href="#"><i class="dl-icon-compare2"></i></a>
     </div> -->
   </div>
-
 </template>
