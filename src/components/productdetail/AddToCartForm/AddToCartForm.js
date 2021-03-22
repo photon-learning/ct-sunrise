@@ -56,8 +56,12 @@ export default {
       return this.$apollo.loading;
     },
   },
-  methods: {
+  methods: { 
     async addLineItem() {
+      if (localStorage.skuselect != '') {
+        this.sku = localStorage.skuselect;
+        localStorage.skuselect = '';
+      }
       if (!this.cartExists) {
         await this.createMyCart(createCartVariables(this));
       }
