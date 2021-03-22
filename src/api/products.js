@@ -158,29 +158,36 @@ const products = {
     const searchText = route.query.q
       ? { [`text.${loc}`]: route.query.q }
       : {};
-      var sort = {};
+    var sort = {};
     switch (sortValue) {
       case "newest":
-         sort =
+        sort =
         {
           sort: `lastModifiedAt ${sortValue === "newest" ? "desc" : "asc"
             }`,
         };
         break;
-        case "price":
-         sort =
+      case "highToLow":
+        sort =
         {
-          sort: `variants.scopedPrice.value.centAmount ${sortValue === "price" ? "desc" : "asc"
+          sort: `variants.scopedPrice.value.centAmount ${sortValue === "highToLow" ? "desc" : "asc"
             }`,
         };
         break;
-        // case "rating":
-        //  sort =
-        // {
-        //   sort: `variants.rating.value.label ${sortValue === "rating" ? "desc" : "asc"
-        //     }`,
-        // };
-        // break;
+      case "LowToHigh":
+        sort =
+        {
+          sort: `variants.scopedPrice.value.centAmount ${sortValue === "LowToHigh" ? "asc" : "desc"
+            }`,
+        };
+        break;
+      // case "rating":
+      //  sort =
+      // {
+      //   sort: `variants.rating.value.label ${sortValue === "rating" ? "desc" : "asc"
+      //     }`,
+      // };
+      // break;
     }
     // const sort = sortValue
     //   ? {
