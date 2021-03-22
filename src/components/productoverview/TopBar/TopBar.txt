@@ -6,6 +6,8 @@ en:
   newest: "Newest"
   oldest: "Oldest"
   recommended: "Recommended"
+  rating: "Rating"
+  price: "Price"
 de:
   go-to-top: Seitenanfang"
   notFound: "Keine Ergebnisse Gefunden"

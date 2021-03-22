@@ -11,6 +11,8 @@ export default {
     return {
       sortItems: [{ id: null, name: this.$t('recommended') },
         { id: 'newest', name: this.$t('newest') },
+        { id: 'price', name: this.$t('price') },
+        //{ id: 'rating', name: this.$t('rating') },
       ],
     };
   },

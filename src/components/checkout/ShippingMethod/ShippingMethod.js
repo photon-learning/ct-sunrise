@@ -21,6 +21,7 @@ export default {
   data: () => ({
     me: null,
     selectedShippingMethod: null,
+    pricetier: null
   }),
   methods: {
     price(shippingMethod) {
@@ -44,6 +45,9 @@ export default {
   watch: {
     me(value) {
       this.selectedShippingMethod = value?.activeCart?.shippingInfo?.shippingMethod?.id;
+      this.pricetier = value?.activeCart?.shippingInfo?.price?.centAmount;
+      // eslint-disable-next-line no-console
+      console.log("ship info:", value?.activeCart?.shippingInfo?.price?.centAmount);
     },
     shippingMethodsByLocation(value) {
       if (!this.selectedShippingMethod) {
@@ -75,6 +79,10 @@ export default {
               id
               version
               shippingInfo {
+                shippingMethodName
+                price {
+                  ...MoneyFields
+                }
                 shippingMethod {
                   id
                 }
@@ -89,7 +97,8 @@ export default {
               }
             }
           }
-        }`,
+        }
+        ${MONEY_FRAGMENT}`,
     },
     shippingMethodsByLocation: {
       query: gql`
