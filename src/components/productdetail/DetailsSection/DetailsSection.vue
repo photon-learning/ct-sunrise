@@ -37,7 +37,7 @@
                 <span class="attribute-name">
                   {{$t('Description')}}:
                 </span>
-                <span>
+                <span style="white-space: pre-wrap;">
                   {{description}}
                 </span>
               </li>
