@@ -7,6 +7,7 @@ import AddToCartForm from '../AddToCartForm/AddToCartForm.vue';
 import BasePrice from '../../common/BasePrice/BasePrice.vue';
 import VariantSelector from '../VariantSelector/VariantSelector.vue';
 import { locale } from '../../common/shared';
+import AddToCartFormJS from '../AddToCartForm/AddToCartForm'
 
 export default {
   props: {
@@ -22,15 +23,22 @@ export default {
     AddToCartForm,
     BasePrice,
     VariantSelector,
+    AddToCartFormJS
   },
   mixins: [productMixin],
   data: () => ({
     product: null,
-  }),
+    isOutOfStock:false
+  }),  
   computed: {
     matchingVariant() {
       return this.currentProduct.variant || {};
     },
+  },
+  methods: {
+    listenerChild(value) {      
+      this.isOutOfStock = value;
+    }
   },
   apollo: {
     product: {

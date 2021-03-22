@@ -3,7 +3,7 @@
 <script src="./ProductInfo.js"></script>
 
 <template>
-  <div class="row" v-if="product">
+  <div class="row" v-if="product" > 
     <div class="col-lg-5">
       <div class="product-details-tab">
         <ProductGallery :sku="sku" />
@@ -21,9 +21,10 @@
         </h2>
         <h3>
           <BasePrice :price="matchingVariant.price" />
-        </h3>
+        </h3>        
+        <p v-if="isOutOfStock"  style="color: red">Product Out Of Stock</p>        
         <VariantSelector :sku="sku" />
-        <AddToCartForm :sku="sku" />
+        <AddToCartForm :sku="sku" v-on:listenerChild="listenerChild" />
         <DetailsSection :sku="sku" :description="currentProduct.description"/>
         <!-- <SocialMediaLinks/> -->
 
