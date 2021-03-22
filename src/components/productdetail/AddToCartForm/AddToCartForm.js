@@ -113,8 +113,7 @@ export default {
       if (availableQuantity < Number(this.quantity)) {
         return console.log("product out of stock");
       }else{
-        return this.updateMyCart(updateCartVariables(this)).then(() => {
-          console.log(this.quantity);
+        return this.updateMyCart(updateCartVariables(this)).then(() => {          
           this.$store.dispatch("openMiniCart");
         });
       }      
