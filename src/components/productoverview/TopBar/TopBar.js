@@ -14,6 +14,7 @@ export default {
         { id: "newest", name: this.$t("newest") },
         { id: "highToLow", name: this.$t("highToLow") },
         { id: "LowToHigh", name: this.$t("lowToHigh") },
+        { id: "rating", name: "Rating" },
       ],
     };
   },

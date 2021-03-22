@@ -167,6 +167,13 @@ const products = {
             }`,
         };
         break;
+        case "rating":
+        sort =
+        {
+          sort: `variants.attributes.rating.label ${sortValue === "rating" ? "desc" : "asc"
+            }`,
+        };
+        break;
       case "highToLow":
         sort =
         {
