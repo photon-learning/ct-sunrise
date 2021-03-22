@@ -174,10 +174,10 @@ const products = {
             }`,
         };
         break;
-      case "LowToHigh":
+      case "lowToHigh":
         sort =
         {
-          sort: `variants.scopedPrice.value.centAmount ${sortValue === "LowToHigh" ? "asc" : "desc"
+          sort: `variants.scopedPrice.value.centAmount ${sortValue === "lowToHigh" ? "asc" : "desc"
             }`,
         };
         break;
