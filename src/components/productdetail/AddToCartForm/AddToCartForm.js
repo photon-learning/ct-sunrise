@@ -26,11 +26,21 @@ export const updateCartVariables = (component) => {
       }
     : {};
 
+  const supplyChannel = component.$store.state.channel 
+    ? {
+        supplyChannel: {
+          typeId: 'channel',
+          id: component.$store.state.channel.id,
+        },
+      } 
+    : {};
+
   return {
     addLineItem: {
       sku: component.sku,
       quantity: Number(component.quantity),
       ...distributionChannel,
+      ...supplyChannel
     },
   };
 };
