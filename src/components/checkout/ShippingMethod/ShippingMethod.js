@@ -55,8 +55,9 @@ export default {
       }
     },
     selectedShippingMethod() {
+      console.log("ship info:", "test");
       if(!this.selectedShippingMethod){
-        return
+        return 
       }
       this.updateMyCart([
         {
@@ -79,7 +80,6 @@ export default {
               id
               version
               shippingInfo {
-                shippingMethodName
                 price {
                   ...MoneyFields
                 }
