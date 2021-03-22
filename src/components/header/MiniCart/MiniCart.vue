@@ -51,6 +51,8 @@
                       {{ nameFromLineItem(lineItem) }}
                     </router-link>
                   </h4>
+                  <span>{{ attributenameFromLineItem(lineItem) }}</span>
+                  <br>
                   <span
                     data-test="cart-line-item-quantity"
                   >

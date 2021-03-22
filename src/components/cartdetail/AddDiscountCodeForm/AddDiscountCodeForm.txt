@@ -2,6 +2,7 @@ en:
   code: "Discount code"
   apply: "Apply"
   nonApplicable: "This discount code is non applicable"
+  sorry: "Sorry! Your order subtotal doesn't meet the minimum required amount to apply this promo code"
 de:
   code: "Rabattcode"
   apply: "Anwenden"

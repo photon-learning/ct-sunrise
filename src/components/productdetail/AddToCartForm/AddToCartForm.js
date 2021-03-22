@@ -20,11 +20,21 @@ export const updateCartVariables = (component) => {
       }
     : {};
 
+  const supplyChannel = component.$store.state.channel 
+    ? {
+        supplyChannel: {
+          typeId: 'channel',
+          id: component.$store.state.channel.id,
+        },
+      } 
+    : {};
+
   return {
     addLineItem: {
       sku: component.sku,
-      quantity: Number(component.quantity),      
-       ...distributionChannel,
+      quantity: Number(component.quantity),
+      ...distributionChannel,
+      ...supplyChannel
     },
   };
 };
@@ -61,6 +71,10 @@ export default {
   },  
   methods: {    
     async addLineItem() {
+      if (localStorage.skuselect != '') {
+        this.sku = localStorage.skuselect;
+        localStorage.skuselect = '';
+      }
       if (!this.cartExists) {
         await this.createMyCart(createCartVariables(this));
       }

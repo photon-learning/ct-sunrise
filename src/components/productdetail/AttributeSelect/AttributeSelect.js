@@ -1,5 +1,6 @@
 import HooverDropdown from '../../common/HoverDropdown/HoverDropdown.vue';
 
+
 export default {
   components: {
     HooverDropdown,
@@ -30,13 +31,25 @@ export default {
     selectedValue: {
       get() {
         const data = this.selected[this.id];
-        return Array.isArray(data) ? this.selected.testsize[0].label : data;
+        //return Array.isArray(data) ? this.selected.testsize[0].label : data;
+        return data;
       },
       set(value) {
         const sku = this.variantCombinations.find(
           (combi) => combi[this.id] === value,
         )?.sku;
-        if (sku) this.$router.push({ path: sku });
+        if (this.name == "Size") {
+          let arr = sku.split('-');
+          localStorage.skuselect = localStorage.skustart+'-'+arr[1];
+          if (sku) console.log('tes2', 'sku' + localStorage.skuselect);
+        } else {
+          let arr = sku.split('-');
+          localStorage.skuselect = sku;
+          localStorage.skustart = arr[0];
+          console.log('tes3', 'sku' + sku);
+          if (sku) this.$router.push({ path: sku });
+        }
+
       },
     },
   },

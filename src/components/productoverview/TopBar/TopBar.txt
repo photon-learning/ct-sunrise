@@ -6,8 +6,8 @@ en:
   newest: "Newest"
   oldest: "Oldest"
   recommended: "Recommended"
-  highToLow: "High to Low"
-  lowToHigh: "Low to High"
+  highToLow: "Price High to Low"
+  lowToHigh: "Price Low to High"
 id:
   go-to-top: Seitenanfang"
   notFound: "Hasil Tidak Ditemukan"
@@ -17,5 +17,5 @@ id:
   oldest: "Terlama"
   recommended: "Rekomendasi"
   filter: "Saring"
-  highToLow: "Tinggi ke Rendah"
-  lowToHigh: "Rendah ke Tinggi"
+  highToLow: "Harga Tinggi ke Rendah"
+  lowToHigh: "Harga Rendah ke Tinggi"
