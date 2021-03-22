@@ -14,8 +14,8 @@ en:
   payment: "Payment"
 de:
   customerCare: "Kundenservice"
-  contactUs: "Kontaktieren Sie uns"
-  help: "Hilfe"
+  contactUs: "Hubungi Kami"
+  help: "Bantuan"
   shipping: "Versand"
   returns: "Retoure"
   sizeGuide: "Größentabelle"
