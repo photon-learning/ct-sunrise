@@ -30,7 +30,11 @@ export const updateCartVariables = (component) => {
     addLineItem: {
       sku: component.sku,
       quantity: Number(component.quantity),
-      ...distributionChannel,
+      supplyChannel: {
+        "typeId": "channel",
+        "id": component.$store.state.channel.id
+      },     
+       ...distributionChannel,
     },
   };
 };
@@ -112,7 +116,7 @@ export default {
         }
       }
       if (availableQuantity < Number(this.quantity)) {
-        return console.log("product out of stock");
+        return alert('Sorry Product Out Of Stock')
       }else{
         return this.updateMyCart(updateCartVariables(this)).then(() => {          
           this.$store.dispatch("openMiniCart");
