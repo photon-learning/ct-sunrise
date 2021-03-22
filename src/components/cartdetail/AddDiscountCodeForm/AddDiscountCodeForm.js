@@ -24,8 +24,9 @@ export default {
           code: this.form.code,
         },
       }).then(() => {
-        this.form.code = null;
-      });
+        this.form.code = this.$t('code');
+      });  
+    
     },
     getErrorMessage({ code }) {
       if (code === 'DiscountCodeNonApplicable') {
