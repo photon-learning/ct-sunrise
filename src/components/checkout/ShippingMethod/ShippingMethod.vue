@@ -15,7 +15,20 @@
         :value="shippingMethod.id"
         name="shipping_method"
       />
-      <label
+      <label v-if="me.activeCart.shippingInfo.shippingMethod.id == shippingMethod.id 
+      && me.activeCart.shippingInfo.price.centAmount != price(shippingMethod).centAmount"
+        data-test="checkout-form-shipping-method-name"
+      >
+        <span class="col-md-10" style="padding: 0">
+          {{ shippingMethod.name }}
+        </span>
+        <BaseMoney
+          :money="price(shippingMethod)"
+          data-test="checkout-form-shipping-method-price"
+          style="color:red;text-decoration: line-through"
+        />
+      </label>
+      <label v-else
         data-test="checkout-form-shipping-method-name"
       >
         <span class="col-md-10" style="padding: 0">
@@ -31,8 +44,16 @@
           data-test="checkout-form-shipping-method-description"
         >
           {{ shippingMethod.localizedDescription }}
+       
         </p>
       </div>
+      <span v-if="me.activeCart.shippingInfo.shippingMethod.id == shippingMethod.id && 
+      me.activeCart.shippingInfo.price.centAmount != price(shippingMethod).centAmount">
+        Current Price Delivery : <BaseMoney
+            :money="me.activeCart.shippingInfo.price"
+            data-test="checkout-form-shipping-method-price"
+          />
+      </span>
     </div>
   </div>
 </template>

@@ -95,6 +95,15 @@ export default {
                 en: "Gender",
             },
         },
+        {
+            name: "rating",
+            type: "enum",
+            component: "rating",
+            label: {
+                it: "Nilai",
+                en: "Rating",
+            },
+        },
     ],
     detailAttributes: [
         "color",
@@ -102,9 +111,9 @@ export default {
         "colorFreeDefinition",
         "brand",
         "choosegender",
-        "articleNumberManufacturer",
+        "rating",
         "productDescription"
     ],
-    variantSelector: ["color","testsize"],
-    variantInProductName: ["testsize"],
+    variantSelector: ["color","size"],
+    variantInProductName: ["size"],
 };

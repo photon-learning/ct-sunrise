@@ -30,7 +30,8 @@ export default {
     selectedValue: {
       get() {
         const data = this.selected[this.id];
-        return Array.isArray(data) ? this.selected.testsize[0].label : data;
+        //return Array.isArray(data) ? this.selected.testsize[0].label : data;
+        return data;
       },
       set(value) {
         const sku = this.variantCombinations.find(

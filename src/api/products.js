@@ -32,12 +32,11 @@ const facets = (query = {}, locale) =>
     if (query.hasOwnProperty(name)) {
       result["filter.query"] = result["filter.query"] || [];
       result["filter.query"].push(
-        `${asAttribute(name, type, locale)}:${
-          Array.isArray(query[name])
-            ? query[name]
-                .map((value) => `"${value}"`)
-                .join(",")
-            : `"${query[name]}"`
+        `${asAttribute(name, type, locale)}:${Array.isArray(query[name])
+          ? query[name]
+            .map((value) => `"${value}"`)
+            .join(",")
+          : `"${query[name]}"`
         }`
       );
     }
@@ -46,9 +45,9 @@ const facets = (query = {}, locale) =>
 const setCategory = ({ category, ...query }) =>
   category
     ? {
-        ...query,
-        "filter.query": `categories.id:subtree("${category}")`,
-      }
+      ...query,
+      "filter.query": `categories.id:subtree("${category}")`,
+    }
     : query;
 
 const products = {
@@ -159,13 +158,43 @@ const products = {
     const searchText = route.query.q
       ? { [`text.${loc}`]: route.query.q }
       : {};
-    const sort = sortValue
-      ? {
-          sort: `lastModifiedAt ${
-            sortValue === "newest" ? "desc" : "asc"
-          }`,
-        }
-      : {};
+    var sort = {};
+    switch (sortValue) {
+      case "newest":
+        sort =
+        {
+          sort: `lastModifiedAt ${sortValue === "newest" ? "desc" : "asc"
+            }`,
+        };
+        break;
+      case "highToLow":
+        sort =
+        {
+          sort: `variants.scopedPrice.value.centAmount ${sortValue === "highToLow" ? "desc" : "asc"
+            }`,
+        };
+        break;
+      case "LowToHigh":
+        sort =
+        {
+          sort: `variants.scopedPrice.value.centAmount ${sortValue === "LowToHigh" ? "asc" : "desc"
+            }`,
+        };
+        break;
+      // case "rating":
+      //  sort =
+      // {
+      //   sort: `variants.rating.value.label ${sortValue === "rating" ? "desc" : "asc"
+      //     }`,
+      // };
+      // break;
+    }
+    // const sort = sortValue
+    //   ? {
+    //     sort: `lastModifiedAt ${sortValue === "newest" ? "desc" : "asc"
+    //       }`,
+    //   }
+    //   : {};
     const { min, max } = route.query;
     const priceFilter = {};
     const minQ = min ? min * 100 : "0";

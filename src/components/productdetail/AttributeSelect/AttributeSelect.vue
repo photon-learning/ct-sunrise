@@ -15,7 +15,7 @@
         :key="value"
       >
       
-        {{ value.length == 1 ? value[0].label : value  }}
+        {{ value }}
       </option>
     </select>
   </div>

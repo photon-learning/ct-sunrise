@@ -43,7 +43,7 @@ export default {
     nameFromLineItem(lineItem) {
       const attributes = variantAttributes(lineItem?.variant, locale(this));
       return `${lineItem.name} ${attributes.map(
-        ({ name, value }) => `${name}: ${value.length == 1 ? value[0].label : value}`,
+        ({ name, value }) => `${name}: ${value}`,
       ).join(', ')}`;
     },
   },
