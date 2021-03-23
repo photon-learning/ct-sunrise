@@ -13,3 +13,9 @@
   height: 20px;
   margin-right: 0.6em;
 }
+
+.disabled {
+  cursor: not-allowed;
+  background-color: gray; 
+  pointer-events: none;
+}

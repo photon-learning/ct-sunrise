@@ -42,7 +42,10 @@
     </div>
   </BaseForm> -->
   <div class="product-dec-action-wrap pro-dec-action-2">
-    <div class="quality-cart-wrap">
+    <div
+      class="quality-cart-wrap"
+      v-bind:class="{ disabled: this.$parent.isOutOfStock }"
+    >
       <div class="quality-wrap">
         <input
           class="input-text qty"
@@ -52,10 +55,16 @@
           v-model="quantity"
           data-test="add-to-cart-amount"
           title="Qty"
+          v-bind:class="{ disabled: this.$parent.isOutOfStock }"
         />
       </div>
       <div class="pro-cart-wrap">
-        <a href="#" @click.prevent="addLineItem" data-test="add-to-cart-button">
+        <a
+          href="#"
+          @click.prevent="addLineItem"
+          data-test="add-to-cart-button"
+          v-bind:class="{ disabled: this.$parent.isOutOfStock }"
+        >
           {{ $t("addToCart") }}
         </a>
       </div>
