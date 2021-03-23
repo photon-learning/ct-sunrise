@@ -1,10 +1,14 @@
 import sunriseConfig from "../../../../sunrise.config";
+import { descriptiontext } from '../../common/shared';
 export default {
   props: ['values', 'title'],
   computed: {
     listValues() {
       return Object.entries(this.values).map(([id, name]) => ({ id, name }));
     },
+    descriptiontext(){
+      return descriptiontext(this.$route.params.locale);
+    }
   },
   methods: {
     setValue(value) {
