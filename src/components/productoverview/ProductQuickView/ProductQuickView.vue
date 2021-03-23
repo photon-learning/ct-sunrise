@@ -54,6 +54,7 @@
                     {{ attribute.label || attribute.value }}
                   </li>
                 </ul>
+                {{ currentProduct.description }}
               </div>
             </div>
           </div>

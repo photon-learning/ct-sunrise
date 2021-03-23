@@ -1,4 +1,5 @@
 <script src="./None.js"></script>
+<i18n src="./None.txt"></i18n>
 
 <template>
   <span>
