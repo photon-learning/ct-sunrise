@@ -10,3 +10,9 @@ de:
   shippingAddress: "Lieferanschrift"
   billingAddress: "Rechnungsadresse"
   edit: "Bearbeiten"
+id:
+  paymentDetails: "Detail Pembayaran"
+  shippingMethod: "Pilih Pengiriman"
+  shippingAddress: "Alamat Pengiriman"
+  billingAddress: "Alamat Tagihan"
+  edit: "Edit"

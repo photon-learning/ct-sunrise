@@ -2,3 +2,5 @@ en:
   available: "Available"
 de:
   available: "Verfügbar"
+id:
+  available: "Tersedia"

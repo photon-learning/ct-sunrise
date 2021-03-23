@@ -8,3 +8,8 @@ de:
   required: "Pflichtfeld"
   email: "Eine gültige E-Mail ist erforderlich"
   minLength: "Es sollte mindestens {min} Zeichen enthalten"
+id:
+  unknownValidation: "Field tidak valid"
+  required: "Field dibutuhkan"
+  email: "Input email yang valid"
+  minLength: "Harus di-input minimal {min} karakter"
