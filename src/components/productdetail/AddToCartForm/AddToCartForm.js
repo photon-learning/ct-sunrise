@@ -71,6 +71,7 @@ export default {
       if (localStorage.skuselect != '') {
         this.sku = localStorage.skuselect;
         localStorage.skuselect = '';
+        localStorage.skustart = '';
       }
       if (!this.cartExists) {
         await this.createMyCart(createCartVariables(this));

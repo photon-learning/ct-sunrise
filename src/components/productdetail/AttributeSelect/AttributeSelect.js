@@ -39,8 +39,13 @@ export default {
           (combi) => combi[this.id] === value,
         )?.sku;
         if (this.name == "Size") {
-          let arr = sku.split('-');
-          localStorage.skuselect = localStorage.skustart+'-'+arr[1];
+          if (localStorage.skustart != '') {
+            let arr = sku.split('-');
+            localStorage.skuselect = localStorage.skustart+'-'+arr[1];
+          } else {
+            localStorage.skuselect = sku;
+          }
+          
           if (sku) console.log('tes2', 'sku' + localStorage.skuselect);
         } else {
           let arr = sku.split('-');
