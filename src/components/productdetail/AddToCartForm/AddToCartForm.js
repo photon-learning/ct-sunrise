@@ -3,12 +3,6 @@ import cartMixin from "../../../mixins/cartMixin";
 // import LoadingButton from '../../common/form/LoadingButton/index.vue';
 // import BaseSelect from '../../common/form/BaseSelect/index.vue';
 // import BaseForm from '../../common/form/BaseForm/index.vue';
-// const authUrl = "https://auth.us-central1.gcp.commercetools.com";
-//     const hostUrl = "https://api.us-central1.gcp.commercetools.com";
-//     const projectKey = "photon-learning";
-//     let access_token = null;
-//     let availableQuantity = 0;
-//     let isAvailable = false;
 
 export const createCartVariables = (component) => ({
   currency: component.$store.state.currency,
@@ -45,6 +39,7 @@ export const updateCartVariables = (component) => {
   };
 };
 export default {
+  name:'AddToCartForm',  
   props: {
     sku: {
       type: String,
@@ -65,8 +60,16 @@ export default {
     isLoading() {
       return this.$apollo.loading;
     },
-  },
-  methods: { 
+    setOutOfStock: {
+      get: function () {
+        return;
+      },
+      set: function (value) {                
+        return this.$emit("listenerChild", value);
+      }
+    },  
+  },  
+  methods: {    
     async addLineItem() {
       if (localStorage.skuselect != '') {
         this.sku = localStorage.skuselect;
@@ -75,7 +78,6 @@ export default {
       if (!this.cartExists) {
         await this.createMyCart(createCartVariables(this));
       }
-
       const authUrl = "https://auth.us-central1.gcp.commercetools.com";
       const hostUrl = "https://api.us-central1.gcp.commercetools.com";
       const projectKey = "photon-learning";
@@ -118,17 +120,18 @@ export default {
               },
             }
           );
-          const myJson = await response.json();
-          availableQuantity = myJson.results[0].availableQuantity;
+          const myJson = await response.json();          
+          availableQuantity = myJson.results[0].availableQuantity??0;
         } catch (error) {
           console.log("error get inventory");
           console.log(error);
         }
       }
-      if (availableQuantity < Number(this.quantity)) {
-        return console.log("product out of stock");
+      if (availableQuantity < Number(this.quantity)) {       
+        return this.setOutOfStock=true;   
       }else{
-        return this.updateMyCart(updateCartVariables(this)).then(() => {          
+        return this.updateMyCart(updateCartVariables(this)).then(() => { 
+          this.setOutOfStock=false;        
           this.$store.dispatch("openMiniCart");
         });
       }      
