@@ -1,7 +1,7 @@
 en:
   thankYou: "Thank you for your order!"
   continueShopping: "Continue shopping"
-de:
-  thankYou: "Vielen Dank für Ihre Bestellung!"
-  continueShopping: "Weiter einkaufen"
+id:
+  thankYou: "Terima Kasih atas Pesanan Anda"
+  continueShopping: "Lanjutkan Berbelanja"
 

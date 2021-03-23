@@ -5,10 +5,10 @@ en:
   continueShopping: "Continue Shopping"
   shopNow: "Shop now"
   startCheckout: "Start Checkout"
-de:
-  yourCart: "Ihr Warenkorb"
-  itemsTotal: "{n} Artikel im Warenkorb"
-  empty: "Ihr Warenkorb ist derzeit leer"
-  continueShopping: "Weiter einkaufen"
-  shopNow: "Jetzt einkaufen"
-  startCheckout: "Zur Kasse"
+id:
+  yourCart: "Keranjang"
+  itemsTotal: "{n} Barang dalam Pesanan"
+  empty: "Keranjang Anda kosong"
+  continueShopping: "Lanjutkan Berbelanja"
+  shopNow: "Belanja Sekarang"
+  startCheckout: "Mulai Transaksi"

@@ -1,6 +1,8 @@
 import Breadcrumb from '../../common/Breadcrumb/Breadcrumb.vue';
 import ProductInfo from '../ProductInfo/ProductInfo.vue';
 
+localStorage.skuselect = '';
+
 export default {
   props: {
     productSlug: {

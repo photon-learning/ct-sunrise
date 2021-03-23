@@ -1,4 +1,4 @@
 en:
   retry: "Retry"
-de:
-  retry: "Wiederholen"
+id:
+  retry: "Coba Lagi"

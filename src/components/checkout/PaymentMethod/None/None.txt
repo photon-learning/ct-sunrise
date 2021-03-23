@@ -1,0 +1,6 @@
+en:
+  paymentMethod: "Payment Method"
+  creditCard: "Credit Card"
+id:
+  paymentMethod: "Pembayaran"
+  creditCard: "Kartu Kredit"
