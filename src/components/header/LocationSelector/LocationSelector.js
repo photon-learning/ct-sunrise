@@ -6,8 +6,11 @@ export default {
     listValues() {
       return Object.entries(this.values).map(([id, name]) => ({ id, name }));
     },
-    descriptiontext(){
+    descriptionLocale(){
       return descriptiontext(this.$route.params.locale);
+    },
+    descriptionCountry(){
+      return descriptiontext(this.$route.params.country);
     }
   },
   methods: {
