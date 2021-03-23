@@ -33,9 +33,11 @@
                   {{ attribute.label || attribute.value }}
                 </span>
               </li>
-                <span style="white-space: pre-wrap;">
+              <li>
+                <span style="white-space: pre-line;">
                   {{description}}
                 </span>
+              </li>
               <!-- <li style="white-space: pre-wrap;">{{description}}</li> -->
             </ul>
           </div>
