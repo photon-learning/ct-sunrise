@@ -10,7 +10,6 @@ export default {
   data() {
     return {
       sortItems: [
-        { id: null, name: this.$t("recommended") },
         { id: "newest", name: this.$t("newest") },
         { id: "highToLow", name: this.$t("highToLow") },
         { id: "lowToHigh", name: this.$t("lowToHigh") },
