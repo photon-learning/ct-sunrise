@@ -13,3 +13,11 @@ de:
   total: "Gesamtpreis"
   discount: "Rabatt"
   checkout: "Zur Kasse"
+id:
+  cartTotals: "Total Keranjang"
+  subtotal: "Subtotal"
+  shipping: "Pengiriman"
+  salesTax: "Pajak Penjualan"
+  total: "Total"
+  discount: "Diskon"
+  checkout: "Beli"

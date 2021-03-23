@@ -18,3 +18,13 @@
     checkout: "Checkout"
     emptyCart: "Your cart is currently empty"
     subtotal: "Subtotal"
+  id:
+    miniCart: "Keranjang Belanja"
+    viewBag: "Lihat Keranjang"
+    quantity: "Kuantitas"
+    price: "Harga"
+    totalPrice: "Total"
+    hapdeleteus: "Hapus"
+    checkout: "Beli"
+    emptyCart: "Keranjang Anda saat ini kosong"
+    subtotal: "Subtotal"

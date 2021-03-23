@@ -135,7 +135,7 @@
                       class="email"
                       type="email"
                       required=""
-                      placeholder="$help"
+                      placeholder="Email"
                       name="EMAIL"
                       value=""
                     />

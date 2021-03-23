@@ -7,3 +7,8 @@ de:
   code: "Rabattcode"
   apply: "Anwenden"
   nonApplicable: "Dieser Rabattcode ist nicht anwendbar"
+id:
+  code: "Kode diskon"
+  apply: "Terapkan"
+  nonApplicable: "Kode diskon ini tidak bisa dipakai"
+  sorry: "Maaf! Total belanja belum memenuhi syarat untuk menggunakan kode diskon ini"
