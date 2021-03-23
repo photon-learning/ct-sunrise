@@ -1,4 +1,4 @@
-de:
-  addToCart: Zum Warenkorb Hinzufügen
+id:
+  addToCart: Tambah ke Keranjang
 en:
   addToCart: Add to Bag
