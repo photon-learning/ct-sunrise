@@ -8,7 +8,7 @@
     <ul >
       
       <li v-for="value in listValues" v-bind:key="value.name" >
-        <div v-if="descriptiontext == value.id">
+        <div v-if="descriptionLocale == value.id || descriptionCountry == value.id">
           <a @click.prevent="()=>setValue(value.id)" href="javascript:;" class="lang-choosed"
           >{{value.name}}</a>
         </div>
