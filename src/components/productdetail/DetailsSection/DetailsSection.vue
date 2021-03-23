@@ -34,10 +34,7 @@
                 </span>
               </li>
               <li>
-                <span class="attribute-name">
-                  {{$t('Description')}}:
-                </span>
-                <span style="white-space: pre-wrap;">
+                <span style="white-space: pre-line;">
                   {{description}}
                 </span>
               </li>
