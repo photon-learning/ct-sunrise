@@ -54,14 +54,8 @@
                     {{ attribute.label || attribute.value }}
                   </li>
                 </ul>
-                <ul>
-                  <li>
-                    <span class="attribute-name">Description:</span>
                      <span style="white-space: pre-wrap;">
                       {{ currentProduct.description }}</span>
-                  </li>
-                </ul>
-                {{ currentProduct.description }}
               </div>
             </div>
           </div>

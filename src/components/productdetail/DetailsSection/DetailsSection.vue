@@ -33,14 +33,9 @@
                   {{ attribute.label || attribute.value }}
                 </span>
               </li>
-              <li>
-                <span class="attribute-name">
-                  {{$t('Description')}}:
-                </span>
                 <span style="white-space: pre-wrap;">
                   {{description}}
                 </span>
-              </li>
               <!-- <li style="white-space: pre-wrap;">{{description}}</li> -->
             </ul>
           </div>
