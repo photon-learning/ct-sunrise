@@ -17,6 +17,8 @@ en:
     tracking: "Order Tracking"
     help: "Help & Support"
     newsletter: "JOIN OUR NEWSLETTER"
+    email: "Enter your email address"
+    submit: "Submit"
 id:
     company: "PERUSAHAAN"
     aboutUs: " Tentang Kami"
@@ -36,4 +38,5 @@ id:
     tracking: "Lacak Pesanan"
     help: "Bantuan & Dukungan"
     newsletter: "GABUNG NEWSLETTER KAMI"
-
+    email: "Masukkan email anda"
+    submit: "Kirim"
