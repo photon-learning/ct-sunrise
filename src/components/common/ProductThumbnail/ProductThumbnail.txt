@@ -5,10 +5,10 @@ en:
   moreColors: More colours
   add: Add item to wishlist
   addToCart: Add to Bag
-de:
+id:
   sale: Sale
-  new: Neu
-  quickView: Schnellansicht
-  moreColors: Mehr Farben
-  add: Auf den Wunschzettel
-  addToCart: Zum Warenkorb Hinzufügen
+  new: Baru
+  quickView: Lihat sekilas
+  moreColors: Warna lainnya
+  add: Tambah ke daftar keinginan
+  addToCart: Tambah ke Keranjang

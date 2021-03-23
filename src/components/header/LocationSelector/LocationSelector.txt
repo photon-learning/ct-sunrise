@@ -6,3 +6,7 @@ de:
   location: "Ort"
   language: "Sprache"
   country: "Land"
+id:
+  location: "Lokasi"
+  language: "Bahasa"
+  country: "Negara"
