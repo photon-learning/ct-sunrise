@@ -41,7 +41,7 @@ export default {
                     currency: "USD",
                 },
             },
-            IDR: {
+            ID: {
                 currency: {
                     style: "currency",
                     currency: "IDR",
@@ -81,7 +81,7 @@ export default {
             name: "color",
             type: "enum",
             component: "color",
-            label: {    
+            label: {
                 it: "Color",
                 en: "Color",
             },
@@ -114,6 +114,6 @@ export default {
         "rating",
         "productDescription"
     ],
-    variantSelector: ["color","size"],
+    variantSelector: ["color", "size"],
     variantInProductName: ["size"],
 };

@@ -58,7 +58,7 @@ export default {
   },
   mixins: [cartMixin],
   data: () => ({
-    quantity: 1,
+    quantity: 1,    
   }),
   computed: {
     isLoading() {
@@ -69,9 +69,12 @@ export default {
         return;
       },
       set: function (value) {                
-        return this.$emit("listenerChild", value);
+        this.$emit("listenerChild", value);        
       }
     },  
+    disabledClass: () => {
+      return this.$parent.isOutOfStock ? "disabled" : ""
+    }
   },  
   methods: {    
     async addLineItem() {

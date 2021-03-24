@@ -135,7 +135,7 @@
                       class="email"
                       type="email"
                       required=""
-                      placeholder="$help"
+                      :placeholder="$t('email')"
                       name="EMAIL"
                       value=""
                     />
@@ -152,7 +152,7 @@
                         class="button"
                         type="submit"
                         name="subscribe"
-                        value="Submit"
+                        :value="$t('submit')"
                       />
                     </div>
                   </div>

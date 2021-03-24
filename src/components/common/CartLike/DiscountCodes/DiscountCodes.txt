@@ -2,3 +2,5 @@ en:
   appliedDiscounts: "Applied discounts"
 de:
   appliedDiscounts: "Angewandte Rabatte"
+id:
+  appliedDiscounts: "Diskon diterapkan"

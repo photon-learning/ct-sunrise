@@ -54,7 +54,8 @@
                     {{ attribute.label || attribute.value }}
                   </li>
                 </ul>
-                {{ currentProduct.description }}
+                     <span style="white-space: pre-line;">
+                      {{ currentProduct.description }}</span>
               </div>
             </div>
           </div>

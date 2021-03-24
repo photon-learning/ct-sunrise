@@ -8,3 +8,8 @@ de:
   quantity: "Menge"
   price: "Preis"
   total: "Gesamtpreis"
+id:
+  description: "Deskripsi"
+  quantity: "Kuantitas"
+  price: "Harga"
+  total: "Total"

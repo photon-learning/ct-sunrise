@@ -1,8 +1,8 @@
-de:
-  productDetails: "Produktdetails"
-  deliveryReturns: "Versand & Retoure"
-  freeReturns: "Kostenlose Retoure."
-  moreDeliveryInfo: "Versandinformationen"
+id:
+  productDetails: "Detail Produk"
+  deliveryReturns: "Pengiriman & Pengembalian"
+  freeReturns: "Pengembalian gratis untuk semua pesanan."
+  moreDeliveryInfo: "Informasi pengiriman"
 en:
   productDetails: "Product details"
   deliveryReturns: "Delivery & Returns"
