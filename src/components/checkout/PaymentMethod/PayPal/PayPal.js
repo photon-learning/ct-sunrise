@@ -56,7 +56,7 @@ export default {
                     currencyCode : event.transactions[0].amount.currency,
                     centAmount : event.transactions[0].amount.total
                   },
-                  state : "Paid"
+                  state : "Success"
                 } ]
             })
             .then((payment) => {
