@@ -96,6 +96,32 @@ export default {
       });
     },
 
+    createMyPayment(paymentvalue) {
+      return this.$apollo.mutate({
+        mutation: gql`
+          mutation ($draft: MyPaymentDraft!) {
+            createPayment(draft: $paymentvalue ) {
+              id
+              version
+              amountPlanned {
+                type
+                currencyCode
+                centAmount
+                fractionDigits
+              }
+              paymentMethodInfo {
+                paymentInterface
+                method
+                name
+              }
+              paymentStatus
+              transactions
+            }
+          }`,
+        variables: { paymentvalue },
+      }).then((result) => {console.log("result",result)});
+    },
+
     createMyOrder() {
       return this.$apollo.mutate({
         mutation: gql`

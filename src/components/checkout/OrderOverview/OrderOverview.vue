@@ -55,12 +55,7 @@
           data-test="shipping-methods"
         />
       </div>
-      <PaymentMethod 
-        data-test="payment-methods"
-        v-bind:amount="amount"
-        v-on:card-paid="cardPaid"
-        :key="me.activeCart.totalPrice.centAmount"
-      />
+      
       <div class="your-order-info order-total">
         <ul>
           <li class="bold-text">
@@ -89,15 +84,22 @@
     </div>
     <div 
       class="Place-order mt-30"
-      v-if="paid"
+      
     >
-      <a
+    <PaymentMethod 
+        data-test="payment-methods"
+        v-bind:amount="amount"
+        v-on:card-paid="cardPaid"
+        :key="me.activeCart.totalPrice.centAmount"
+        
+      />
+      <!-- <a
         @click.prevent="placeOrder"
         data-test="place-order"
         href
-      >
-        {{ $t('placeOrder') }}
-      </a>
+      > -->
+      <!-- {{ $t('placeOrder') }} -->
+      <!-- </a> -->
     </div>
     <div v-if="showError" class="error-message mt-10">
       * Please fill in all required data

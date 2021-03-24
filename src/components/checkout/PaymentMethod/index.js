@@ -1,6 +1,6 @@
-import None from "./None/None.vue";
+import PayPal from "./PayPal/PayPal.vue";
 
-let Payment = None;
+let Payment = PayPal;
 if (process.env.VUE_APP_USE_ADYEN) {
   Payment = require("./Adyen/Adyen.vue").default;
 }
