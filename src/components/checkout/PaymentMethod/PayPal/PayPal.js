@@ -1,6 +1,6 @@
 import PayPal from 'vue-paypal-checkout';
 import cartMixin from "../../../../mixins/cartMixin";
-
+import payments from "../../../../api/payments";
  
 export default {
   props: { amount: Object },
@@ -37,34 +37,41 @@ export default {
        console.log(`<<<<<<<<<paymentAuthorized`); 
     },
     paymentCompleted(event) {
-      
+      payments
+            .createItem({
+              amountPlanned : {
+                currencyCode : this.amount.currencyCode,
+                centAmount : this.amount.centAmount
+              },
+              paymentMethodInfo: {
+                paymentInterface : "PAYPAL",
+                method : "PAYPAL",
+                name : {
+                  "en" : "PAYPAL"
+                }},
+                transactions : [ {
+                  timestamp : event.create_time,
+                  type : "Charge",
+                  amount : {
+                    currencyCode : event.transactions[0].amount.currency,
+                    centAmount : event.transactions[0].amount.total
+                  },
+                  state : "Paid"
+                } ]
+            })
+            .then((payment) => {
+              if (payment.satusCode) {
+                return Promise.reject();
+              }
+              this.$store.dispatch("setPayment", payment);
+              return payment;
+            });
       let result = event;
-      const paymentvalue = {
-        amountPlanned : {
-          currencyCode : this.amount.currencyCode,
-          centAmount : this.amount.centAmount
-        },
-        "paymentMethodInfo" : {
-          "paymentInterface" : "PAYPAL",
-          "method" : "PAYPAL",
-          "name" : {
-            "en" : "PAYPAL"
-          }
-        },
-        "transactions" : [ {
-          "timestamp" : event.create_time,
-          "type" : "Charge",
-          "amount" : {
-            "currencyCode" : event.transactions[0].amount.currency,
-            "centAmount" : event.transactions[0].amount.total
-          },
-          "state" : event.state
-        } ]
-      };
+      //this.createMyPayment(paymentvalue);
        // Your response
        console.log(`>>>>>>>>>paymentCompleted`);
        console.log(result);
-       console.log(paymentvalue);
+       //console.log(paymentvalue);
        console.log(`<<<<<<<<<paymentCompleted`); 
     },
     paymentCancelled(event) {
