@@ -30,6 +30,17 @@
         >
           <span>
             <BasePrice :price="taxes" />
+            <div v-if="subtotal.discounted != null">
+              <p v-if="total.value.centAmount == subtotal.discounted.value.centAmount"
+                class="taxdesc">
+                *included in price
+              </p>
+            </div>
+            <div v-else>
+              <p v-if="total.value.centAmount == subtotal.value.centAmount">
+                included in price
+              </p>
+            </div>
           </span>
         </div>
       </div>

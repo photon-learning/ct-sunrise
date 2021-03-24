@@ -46,9 +46,7 @@ export default {
         return {
           value: {
             centAmount:
-              totalPrice.centAmount +
-              taxedPrice.totalGross.centAmount -
-              taxedPrice.totalNet.centAmount,
+              taxedPrice.totalGross.centAmount,
             currencyCode,
             fractionDigits,
           },

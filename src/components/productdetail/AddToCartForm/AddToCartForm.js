@@ -9,6 +9,10 @@ export const createCartVariables = (component) => ({
   country: component.$store.state.country,
   shippingAddress: { country: component.$store.state.country },
   inventoryMode: "TrackOnly",
+  taxMode: "External",
+  taxRoundingMode: "HalfEven"
+
+  //custom: {type:{key:"custom-cart-weight"},fields:{weightinCart: "0"}},
 });
 export const updateCartVariables = (component) => {
   const distributionChannel = component.$store.state.channel
