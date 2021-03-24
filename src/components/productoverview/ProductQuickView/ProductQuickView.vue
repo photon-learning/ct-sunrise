@@ -43,7 +43,7 @@
                   </div>
                 </div>
               </div>
-              <div class="pt-30">
+              <div class="pt-30" style="overflow-y:auto;height:190px;">
                 <ul class="product-features-list">
                   <li
                     v-for="attribute in productAttributes"
