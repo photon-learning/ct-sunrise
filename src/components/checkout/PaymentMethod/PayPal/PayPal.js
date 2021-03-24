@@ -39,6 +39,7 @@ export default {
     placeOrder(payment) {
       console.log("paymentdata",payment);
       this.$emit("place-order", payment.id);
+      
     },
     paymentCompleted(event) {
       payments
@@ -62,9 +63,11 @@ export default {
                 } ]
             })
             .then((payment) => {
-              
+              if (payment.satusCode) {
+                return Promise.reject();
+              }
               this.$store.dispatch("setPayment", payment);
-              //this.$emit("card-paid", payment.id);
+              this.$emit("card-paid", payment.id);
                this.placeOrder(payment);
               return payment;
             });
