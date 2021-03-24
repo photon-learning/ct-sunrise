@@ -36,13 +36,15 @@ export default {
        console.log(JSON.stringify(event));
        console.log(`<<<<<<<<<paymentAuthorized`); 
     },
+    placeOrder(payment) {
+      console.log("paymentdata",payment);
+      this.$emit("place-order", payment.id);
+    },
     paymentCompleted(event) {
       payments
             .createItem({
-              amountPlanned : {
-                currencyCode : this.amount.currencyCode,
-                centAmount : this.amount.centAmount
-              },
+              amountPlanned : this.amount,
+              
               paymentMethodInfo: {
                 paymentInterface : "PAYPAL",
                 method : "PAYPAL",
@@ -54,16 +56,16 @@ export default {
                   type : "Charge",
                   amount : {
                     currencyCode : event.transactions[0].amount.currency,
-                    centAmount : event.transactions[0].amount.total
+                    centAmount : Number(event.transactions[0].amount.total.replace(".",""))
                   },
                   state : "Success"
                 } ]
             })
             .then((payment) => {
-              if (payment.satusCode) {
-                return Promise.reject();
-              }
+              
               this.$store.dispatch("setPayment", payment);
+              //this.$emit("card-paid", payment.id);
+               this.placeOrder(payment);
               return payment;
             });
       let result = event;

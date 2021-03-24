@@ -90,6 +90,7 @@
         data-test="payment-methods"
         v-bind:amount="amount"
         v-on:card-paid="cardPaid"
+        @place-order = "placeOrder"
         :key="me.activeCart.totalPrice.centAmount"
         
       />

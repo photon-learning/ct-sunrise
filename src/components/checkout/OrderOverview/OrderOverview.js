@@ -51,6 +51,7 @@ export default {
       this.$apollo.queries.me.refresh();
     },
     placeOrder() {
+      console.log("asasasasa","masuk sini");
       this.$emit("complete-order", this.paymentid);
     },
     nameFromLineItem(lineItem) {
