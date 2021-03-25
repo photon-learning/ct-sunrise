@@ -2,6 +2,12 @@ en:
   title: Store Locator
   search: Search by location
   enterPostalCode: Enter your Zip Code
-de:
-  title: Filialsuche
-  search: Nach Ort suchen
+  selectBtn: Select This Store
+  storetitle: Stores
+  descstore: No stores found. Try increasing your search radius
+id:
+  title: Cari Toko
+  search: Cari dari Lokasi
+  selectBtn: Pilih Toko
+  storetitle: Toko
+  descstore: Toko tidak ditemukan. Tingkatkan jarak pencarian

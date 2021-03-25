@@ -1,6 +1,6 @@
 de:
   showMore: "Mehr"
   showLess: "Weniger"
-en:
-  showMore: "Show more"
-  showLess: "Show less"
+id:
+  showMore: "Lihat"
+  showLess: "Sembunyikan"

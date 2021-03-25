@@ -54,6 +54,20 @@ const payments = {
         }),
       })
   ),
-};
+  updatePaymentState: withToken(({ id, version, state }, accessToken) => 
+    fetchJson(`${baseUrl}/orders/${id}`, {
+      ...makeConfig(accessToken),
+      method: "POST",
+      body: JSON.stringify({
+        version: version,
+        actions: [
+          {
+            action : "changePaymentState",
+            paymentState : state
+          }
+        ]
+      }),
+    })
+  )}
 
 export default payments;

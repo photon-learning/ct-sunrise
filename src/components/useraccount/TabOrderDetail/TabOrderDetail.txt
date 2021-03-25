@@ -12,7 +12,7 @@ en:
   total: Total
   notFound: Order not found
   return: Return an item
-de:
+id:
   title: Ihre Bestelldetails
   orderNumber: Bestellnummer
   date: Bestelldatum

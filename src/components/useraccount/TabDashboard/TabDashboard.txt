@@ -4,10 +4,9 @@ en:
   logout: "Logout"
   description: "From your account dashboard you can easily check & view your recent orders,
       manage your shipping and billing addresses and edit your password and account details."
-de:
+id:
   greeting: "Hallo"
-  notYou: "Wenn das nicht Sie sind"
-  logout: "Abmelden"
-  description: "Über Ihr Konto-Dashboard können Sie ganz einfach Ihre letzten Bestellungen überprüfen und anzeigen.
-       Verwalten Sie Ihre Versand- und Rechnungsadressen und bearbeiten Sie Ihr Passwort und Ihre Kontodaten."
+  notYou: "Jika Bukan Anda"
+  logout: "Keluar"
+  description: " Dari dasbor akun Anda, Anda dapat dengan mudah memeriksa & melihat pesanan terbaru Anda, mengelola alamat pengiriman dan penagihan Anda dan mengedit kata sandi dan detail akun Anda."
 

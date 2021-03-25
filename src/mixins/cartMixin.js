@@ -36,6 +36,19 @@ export default {
   },
 
   methods: {
+    updateOrder(actions,id,version) {
+      return this.$apollo.mutate({
+        mutation: gql`
+          mutation updateOrder($id: String!, $version: Long!, $actions: [OrderUpdateAction!]!) {
+            updateOrder(id: $id,version:$version ,actions: $actions) {
+              id
+              version
+            }
+          }`,
+          variables: {
+          actions,id: id,version:version}
+      });
+    },
     updateMyCart(actions) {
       // Issue with under-fetching on mutations https://github.com/apollographql/apollo-client/issues/3267
       // required any queried field to be fetched in order to update all components using carts, e.g. mini-cart
@@ -94,6 +107,32 @@ export default {
           store.writeQuery({ query: BASIC_CART_QUERY, data });
         },
       });
+    },
+
+    createMyPayment(paymentvalue) {
+      return this.$apollo.mutate({
+        mutation: gql`
+          mutation ($draft: MyPaymentDraft!) {
+            createPayment(draft: $paymentvalue ) {
+              id
+              version
+              amountPlanned {
+                type
+                currencyCode
+                centAmount
+                fractionDigits
+              }
+              paymentMethodInfo {
+                paymentInterface
+                method
+                name
+              }
+              paymentStatus
+              transactions
+            }
+          }`,
+        variables: { paymentvalue },
+      }).then((result) => {console.log("result",result)});
     },
 
     createMyOrder() {

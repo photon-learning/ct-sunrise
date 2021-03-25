@@ -9,8 +9,8 @@ export const createCartVariables = (component) => ({
   country: component.$store.state.country,
   shippingAddress: { country: component.$store.state.country },
   inventoryMode: "TrackOnly",
-  taxMode: "External",
-  taxRoundingMode: "HalfEven"
+  // taxMode: "External",
+  // taxRoundingMode: "HalfEven"
 
   //custom: {type:{key:"custom-cart-weight"},fields:{weightinCart: "0"}},
 });

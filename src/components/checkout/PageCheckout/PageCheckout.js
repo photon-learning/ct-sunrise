@@ -78,6 +78,7 @@ export default {
                       id: paymentid,
                     },
                   },
+                  
                 },
               ]);
             }
@@ -85,7 +86,17 @@ export default {
           })
           .then((result) => {
             this.me.activeCart = result.data.updateMyCart;
-            return this.createMyOrder();
+            return this.createMyOrder().then((value) => {
+              console.log("hasil",value.data.createMyOrderFromCart.id);
+              return this.updateOrder([
+                {
+                  changePaymentState: {
+                    paymentState: "Paid"
+                  },
+                  
+                },
+              ],value.data.createMyOrderFromCart.id,1);
+            });
           })
           .then(() => {
             this.orderComplete = true;
