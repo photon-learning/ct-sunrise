@@ -38,7 +38,7 @@
               </select>
             </div>
           </div>
-          <h3>Stores</h3>
+          <h3>{{$t('storetitle')}}</h3>
           <div class="addresses">
             <ul
               class="list"
@@ -92,7 +92,7 @@
                         :value="channel.id"
                         data-test="select-store"
                       >
-                        Select This Store
+                        {{$t('selectBtn')}}
                       </button>
                     </div>
                     <div
@@ -108,7 +108,7 @@
               </li>
             </ul>
             <div class="no-stores-found" v-else>
-              No stores found. Try increasing your search radius.
+              {{$t('descstore')}}
             </div>
           </div>
         </div>

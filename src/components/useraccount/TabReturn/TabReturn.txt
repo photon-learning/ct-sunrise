@@ -4,9 +4,9 @@ en:
   alert: Please select at least one item to return
   modalText: Your return was successfull
   close: Close
-de:
-  title: Was möchten Sie zurückschicken?
-  return: Zurückschicken
-  alert: Bitte wählen Sie mindestens einen Artikel aus, der zurückgegeben werden soll
-  modalText: Ihre Rückgabe war erfolgreich
-  close: Schließen
+id:
+  title: Apa yang ingin Anda kembalikan?
+  return: kembalikan
+  alert: Pilih setidaknya satu item untuk dikembalikan
+  modalText: Pengembalian Anda berhasil
+  close: Tutup

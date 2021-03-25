@@ -4,9 +4,9 @@ en:
   firstName: "First Name"
   lastName: "Last Name"
   email: "Email Address"
-de:
-  title: "Benutzerdaten"
-  saveBtn: "Speichern"
-  firstName: "Vorname"
-  lastName: "Nachname"
-  email: "Email Adresse"
+id:
+  title: "Detil Akun"
+  saveBtn: "Simpan"
+  firstName: "Nama Depan"
+  lastName: "Nama Belakang"
+  email: "Alamat E-mail"
