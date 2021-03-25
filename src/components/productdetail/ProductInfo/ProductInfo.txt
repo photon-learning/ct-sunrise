@@ -1,6 +1,13 @@
 de:
   showMore: "Mehr"
   showLess: "Weniger"
+
+en:
+  availableQuantity: "Available stock"
+  OutOfStock: "Out of stock"
+
 id:
   showMore: "Lihat"
   showLess: "Sembunyikan"
+  availableQuantity: "Stok tersedia"
+  OutOfStock: "Stok tidak tersedia"
