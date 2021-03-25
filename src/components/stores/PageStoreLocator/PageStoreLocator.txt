@@ -5,9 +5,15 @@ en:
   selectBtn: Select This Store
   storetitle: Stores
   descstore: No stores found. Try increasing your search radius
+  address: "Address"
+  hours: "Opening hours"
+  enterLocation: "Enter a location"
 id:
   title: Cari Toko
   search: Cari dari Lokasi
   selectBtn: Pilih Toko
   storetitle: Toko
   descstore: Toko tidak ditemukan. Tingkatkan jarak pencarian
+  address: "Alamat"
+  hours: "Jam buka"
+  enterLocation: "Masukkan lokasi"

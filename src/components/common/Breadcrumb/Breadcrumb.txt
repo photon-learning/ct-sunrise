@@ -2,6 +2,6 @@ en:
   home: Home
   all: All
   stores: Sunrise Stores
-de:
-  home: Home
-  all: Alle
+id:
+  home: Beranda
+  all: Semua
