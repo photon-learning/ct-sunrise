@@ -16,11 +16,32 @@
         >
           <span>
             <BasePrice :price="subtotal" />
+            <div v-if="subtotal.discounted != null">
+              <p
+                v-if="
+                  total.value.centAmount == subtotal.discounted.value.centAmount
+                "
+                class="taxdesc"
+              >
+                *included in price
+              </p>
+            </div>
+            <div v-else>
+              <p
+                v-if="total.value.centAmount == subtotal.value.centAmount"
+                class="taxdesc"
+              >
+                {{ $t("taxIncluded") }}
+              </p>
+            </div>
           </span>
         </div>
       </div>
 
-      <div class="single-grand-total">
+      <div
+        v-if="total.value.centAmount != subtotal.value.centAmount"
+        class="single-grand-total"
+      >
         <div class="single-grand-total-left col-sm-6">
           <span>{{ $t("salesTax") }}</span>
         </div>
@@ -30,17 +51,6 @@
         >
           <span>
             <BasePrice :price="taxes" />
-            <div v-if="subtotal.discounted != null">
-              <p v-if="total.value.centAmount == subtotal.discounted.value.centAmount"
-                class="taxdesc">
-                *included in price
-              </p>
-            </div>
-            <div v-else>
-              <p v-if="total.value.centAmount == subtotal.value.centAmount">
-                included in price
-              </p>
-            </div>
           </span>
         </div>
       </div>
