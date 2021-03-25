@@ -21,12 +21,12 @@
         </h2>
         <h3>
           <BasePrice :price="matchingVariant.price" />
-        </h3>        
-        <p v-if="isOutOfStock"  style="color: red">{{$t('OutOfStock')}}</p>        
+        </h3>               
         <VariantSelector :sku="sku" />
         <p v-if="!isOutOfStock">
           {{$t('availableQuantity')}}: {{availableQuantity}}
         </p>
+        <p v-if="isOutOfStock"  style="color: red">{{$t('OutOfStock')}}</p> 
         <AddToCartForm :sku="sku" v-on:listenerChild="listenerChild" />
         <DetailsSection :sku="sku" :description="currentProduct.description"/>
         <!-- <SocialMediaLinks/> -->
