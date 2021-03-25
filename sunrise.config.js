@@ -71,10 +71,12 @@ export default {
     facetSearches: [
         {
             name: "size",
-            type: "text",
+            type: "enum",
+            component: "size",
             label: {
                 it: "Size",
                 en: "Size",
+                id: "Ukuran"
             },
         },
         {
@@ -84,6 +86,7 @@ export default {
             label: {
                 it: "Color",
                 en: "Color",
+                id: "Warna"
             },
         },
         {
@@ -93,6 +96,7 @@ export default {
             label: {
                 it: "Jenis Kelamin",
                 en: "Gender",
+                id: "Jenis Kelamin"
             },
         },
         {
@@ -102,6 +106,7 @@ export default {
             label: {
                 it: "Nilai",
                 en: "Rating",
+                id: "Nilai"
             },
         },
     ],
