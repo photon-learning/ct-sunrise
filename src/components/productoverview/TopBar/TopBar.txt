@@ -8,6 +8,9 @@ en:
   recommended: "Recommended"
   highToLow: "Price High to Low"
   lowToHigh: "Price Low to High"
+  showing: "Showing"
+  of: "of"
+  results: "results"
 id:
   go-to-top: Seitenanfang"
   notFound: "Hasil Tidak Ditemukan"
@@ -19,3 +22,6 @@ id:
   filter: "Saring"
   highToLow: "Harga Tinggi ke Rendah"
   lowToHigh: "Harga Rendah ke Tinggi"
+  showing: "Menampilkan"
+  of: "dari"
+  results: "hasil"
