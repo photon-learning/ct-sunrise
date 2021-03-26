@@ -40,13 +40,18 @@ export default {
       const { currencyCode, fractionDigits } = this.cartLike.totalPrice;
       const { taxedPrice } = this.cartLike;
       const { totalPrice } = this.cartLike;
+      let shippingprice = 0;
+      if (this.cartLike.shippingInfo != null) {
+        shippingprice = this.cartLike.shippingInfo.price.centAmount;
+      }
       console.log("taxedPrice : ", taxedPrice);
       console.log("totalPrice : ", totalPrice);
+      console.log("totalPrice : ", this.cartLike);
       if (taxedPrice) {
         return {
           value: {
             centAmount:
-              taxedPrice.totalGross.centAmount,
+              taxedPrice.totalGross.centAmount - shippingprice,
             currencyCode,
             fractionDigits,
           },
