@@ -28,7 +28,18 @@ export default {
       return productAttributes(attributes);
     },
     descriptiontext(){
-      return descriptiontext(this.description);
+      let result = "-";
+      if (this.product.reviewRatingStatistics) {
+        result = this.product.reviewRatingStatistics.averageRating;
+      }
+      return descriptiontext(result);
+    },
+    descriptiontext2(){
+      let result = "-";
+      if (this.product.reviewRatingStatistics) {
+        result = this.product.reviewRatingStatistics.count;
+      }
+      return descriptiontext(result);
     }
   },
   methods: {
@@ -80,6 +91,10 @@ export default {
                     }
                   }
               }
+            }
+            reviewRatingStatistics {
+              averageRating
+              count
             }
           }
         }`,
