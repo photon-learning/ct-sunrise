@@ -10,6 +10,7 @@
     salestax: "Sales Tax"
     shipping: "Shipping"
     placeOrder: "Place Order"
+    taxIncluded: "*tax included"
   id:
     itemsTotal: "{n} Total Barang"
     editMyCart: "Ubah Keranjang"
@@ -22,3 +23,4 @@
     salestax: "Pajak"
     shipping: "Pengiriman"
     placeOrder: "Buat Pesanan"
+    taxIncluded: "*termasuk pajak"
