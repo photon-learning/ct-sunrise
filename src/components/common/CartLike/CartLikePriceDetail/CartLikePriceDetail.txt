@@ -6,6 +6,7 @@ en:
   total: "Total"
   discount: "Discount"
   checkout: "Checkout"
+  taxIncluded: "*tax included"
 de:
   subtotal: "Zwischensumme"
   shipping: "Versand"
@@ -21,3 +22,4 @@ id:
   total: "Total"
   discount: "Diskon"
   checkout: "Beli"
+  taxIncluded: "*termasuk pajak"

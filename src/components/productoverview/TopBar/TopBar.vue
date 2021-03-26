@@ -7,8 +7,8 @@
     <div class="shop-top-bar-left">
       <div class="shop-top-show">
         <span
-          >Showing {{ offset + 1 }}-{{ offset + count }} of
-          {{ total }} results</span
+          >{{$t("showing")}} {{ offset + 1 }}-{{ offset + count }} {{$t("of")}}
+          {{ total }} {{$t("results")}}</span
         >
       </div>
     </div>

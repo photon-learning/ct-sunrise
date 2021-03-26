@@ -6,7 +6,7 @@ en:
   add: Add item to wishlist
   addToCart: Add to Bag
 id:
-  sale: Sale
+  sale: Diskon
   new: Baru
   quickView: Lihat sekilas
   moreColors: Warna lainnya
