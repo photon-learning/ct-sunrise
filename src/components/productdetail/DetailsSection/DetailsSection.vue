@@ -43,6 +43,9 @@
           </div>
         </div>
       </div>
+      <hr>
+      Rating : {{descriptiontext}} <br>
+      Users : {{descriptiontext2}}
       <div class="panel pro-dec-accordion">
         <div class="panel-heading">
           <h4 class="panel-title">
