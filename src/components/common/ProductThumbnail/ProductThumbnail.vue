@@ -18,7 +18,7 @@
             data-test="product-thumbnail-sale-flag"
             v-if="hasPrice && hasDiscount"
             class="badge-pink badge-right"
-            >Sale</span
+            >{{ $t("sale") }}</span
           >
         </router-link>
         <div class="product-action">
@@ -31,8 +31,8 @@
             href="#"
             @click.prevent="addLineItem(matchingVariant.sku)"
           >
-            <i class=" dl-icon-cart29"></i>
-            <span>{{ $t('addToCart') }}</span></a
+            <i class="dl-icon-cart29"></i>
+            <span>{{ $t("addToCart") }}</span></a
           >
           <!-- <a data-toggle="tooltip" title="Add to Wishlist" href="#"><i class="dl-icon-heart4"></i></a>
         <a data-toggle="tooltip" title="Add to Compare" href="#"><i class="dl-icon-compare"></i></a> -->

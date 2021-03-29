@@ -43,6 +43,7 @@ export default {
       let shippingprice = 0;
       if (this.cartLike.shippingInfo != null) {
         shippingprice = this.cartLike.shippingInfo.price.centAmount;
+
         }
       console.log("taxedPrice : ", taxedPrice);
       console.log("totalPrice : ", totalPrice);

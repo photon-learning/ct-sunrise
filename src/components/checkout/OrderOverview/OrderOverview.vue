@@ -4,14 +4,14 @@
 
 <template>
   <div v-if="me && me.activeCart" class="your-order-area">
-    <h3>{{ $t('orderSummary') }}</h3>
+    <h3>{{ $t("orderSummary") }}</h3>
     <div class="your-order-wrap gray-bg-4">
       <div class="your-order-info-wrap">
         <div class="your-order-info">
           <ul>
             <li class="bold-text">
-              {{ $t('product') }}
-              <span>{{ $t('total') }}</span>
+              {{ $t("product") }}
+              <span>{{ $t("total") }}</span>
             </li>
           </ul>
         </div>
@@ -28,15 +28,29 @@
               </h5>
             </div>
             <div class="single-order-price">
-              <span><BasePrice :price="totalPrice(lineItem)"/></span>
+              <span><BasePrice :price="totalPrice(lineItem)" /></span>
             </div>
           </div>
         </div>
         <div class="your-order-info order-subtotal">
           <ul>
             <li>
-              <b class="bold-text">{{ $t('subtotal') }}</b>
-              <span><BasePrice :price="subtotal"/></span>
+              <b class="bold-text">{{ $t("subtotal") }}</b>
+              <span><BasePrice :price="subtotal" /></span>
+            </li>
+          </ul>
+        </div>
+        <div
+          v-if="
+            subtotal.value.centAmount + taxes.value.centAmount <
+            total.value.centAmount
+          "
+          class="your-order-info order-subtotal"
+        >
+          <ul>
+            <li>
+              <b class="bold-text">{{ $t("salestax") }}</b>
+              <span><BasePrice :price="taxes" /></span>
             </li>
           </ul>
         </div>
@@ -44,23 +58,21 @@
       <!-- if you have adyen payment then you can't cahnge -->
       <!-- shipping method after you paid -->
       <!-- v-if="!paid" -->
-      <div 
-        class="checkout-shipping-content"
-      >
+      <div class="checkout-shipping-content">
         <div class="shipping-content-left">
-          <span class="bold-text">{{ $t('shipping') }}</span>
+          <span class="bold-text">{{ $t("shipping") }}</span>
         </div>
         <ShippingMethod
           @update-shipping="updateShippingMethod"
           data-test="shipping-methods"
         />
       </div>
-      
+
       <div class="your-order-info order-total">
         <ul>
           <li class="bold-text">
-            {{ $t('total') }}
-            <span><BasePrice :price="{value:me.activeCart.totalPrice}"/></span>
+            {{ $t("total") }}
+            <span><BasePrice :price="total" /></span>
           </li>
         </ul>
       </div>
@@ -82,17 +94,13 @@
         </div>
       </div> -->
     </div>
-    <div 
-      class="Place-order mt-30"
-      
-    >
-    <PaymentMethod 
+    <div class="Place-order mt-30">
+      <PaymentMethod
         data-test="payment-methods"
         v-bind:amount="amount"
         v-on:card-paid="cardPaid"
-        @place-order = "placeOrder"
+        @place-order="placeOrder"
         :key="me.activeCart.totalPrice.centAmount"
-        
       />
       <!-- <a
         @click.prevent="placeOrder"

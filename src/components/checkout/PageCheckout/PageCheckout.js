@@ -88,14 +88,27 @@ export default {
             this.me.activeCart = result.data.updateMyCart;
             return this.createMyOrder().then((value) => {
               console.log("hasil",value.data.createMyOrderFromCart.id);
-              return this.updateOrder([
+              this.updateOrder([
                 {
                   changePaymentState: {
                     paymentState: "Paid"
                   },
                   
                 },
-              ],value.data.createMyOrderFromCart.id,1);
+              ],value.data.createMyOrderFromCart.id,1).then(() => {
+                return this.updateOrder([
+                  {
+                    transitionState: {
+                      state: {
+                        typeId : "state",
+                        id : "b8f4c4ca-8e79-4508-afdd-bee19b2f2043"
+                        }
+                    },
+                    
+                  },
+                ],value.data.createMyOrderFromCart.id,2)
+              }
+              );
             });
           })
           .then(() => {

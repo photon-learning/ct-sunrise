@@ -11,7 +11,7 @@
             <gmap-map
               :center="center"
               :zoom="12"
-              style="width:100%;  height: 100%;"
+              style="width: 100%; height: 100%"
             >
               <gmap-marker
                 :key="index"
@@ -25,20 +25,25 @@
         </div>
         <div>
           <div id="googlePlaceBar">
-            <h4>{{ $t('search') }}</h4>
+            <h4>{{ $t("search") }}</h4>
             <div id="place-radius">
-              <gmap-autocomplete id="place-input" @place_changed="setPlace" />
+              <gmap-autocomplete
+                :placeholder="$t('enterLocation')"
+                id="place-input"
+                @place_changed="setPlace"
+              />
               <select v-model="searchRadius" id="radius">
                 <option
                   v-for="opt in radiusOptions"
                   :key="opt.distance"
                   :value="opt.distance"
-                  >{{ opt.label }}</option
                 >
+                  {{ opt.label }}
+                </option>
               </select>
             </div>
           </div>
-          <h3>{{$t('storetitle')}}</h3>
+          <h3>{{ $t("storetitle") }}</h3>
           <div class="addresses">
             <ul
               class="list"
@@ -57,10 +62,7 @@
                       :data-coord-lat="channel.geoLocation.coordinates[1]"
                       :data-coord-lng="channel.geoLocation.coordinates[0]"
                     ></span>
-                    <strong
-                      class="title text-center"
-                      data-test="store-name"
-                    >
+                    <strong class="title text-center" data-test="store-name">
                       {{ channel.name }}
                     </strong>
                     <div class="text-center store-distance">
@@ -69,14 +71,14 @@
                   </span>
                   <b class="price"> </b>
                   <div class="info">
-                    <div class="info-title">Address:</div>
+                    <div class="info-title">{{ $t("address") }}:</div>
                     <div class="info-content">
                       {{ channel.address.streetNumber }}
                       {{ channel.address.streetName }} <br />
                       {{ channel.address.city }},
                       {{ channel.address.postalCode }}
                     </div>
-                    <div class="info-title">Opening hours:</div>
+                    <div class="info-title">{{ $t("hours") }}:</div>
                     <div class="info-content">{{ openingHours(channel) }}</div>
 
                     <!-- <div class="info-content"> Mo-Fr. 10:00AM - 8:00PMSa. 9:00AM - 6:00PM </div> -->
@@ -92,7 +94,7 @@
                         :value="channel.id"
                         data-test="select-store"
                       >
-                        {{$t('selectBtn')}}
+                        {{ $t("selectBtn") }}
                       </button>
                     </div>
                     <div
@@ -108,7 +110,7 @@
               </li>
             </ul>
             <div class="no-stores-found" v-else>
-              {{$t('descstore')}}
+              {{ $t("descstore") }}
             </div>
           </div>
         </div>
