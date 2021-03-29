@@ -47,11 +47,11 @@ export default {
     },
     totalPrice,
     updateShippingMethod(shippingId) {
+
       this.$emit("update-shipping", shippingId);
       this.$apollo.queries.me.refresh();
     },
     placeOrder() {
-      console.log("asasasasa","masuk sini");
       this.$emit("complete-order", this.paymentid);
     },
     nameFromLineItem(lineItem) {
@@ -70,6 +70,35 @@ export default {
         return subTotal(this.me.activeCart);
       }
       return null;
+    },
+    taxes() {
+      const { currencyCode, fractionDigits } = this.me.activeCart.totalPrice;
+      const { taxedPrice } = this.me.activeCart;
+      if (taxedPrice) {
+        return {
+          value: {
+            centAmount:
+              taxedPrice.totalGross.centAmount - taxedPrice.totalNet.centAmount,
+            currencyCode,
+            fractionDigits,
+          },
+        };
+      }
+      return null;
+    },
+    total() {
+      const { currencyCode, fractionDigits } = this.me.activeCart.totalPrice;
+      const { taxedPrice } = this.me.activeCart;
+      if (taxedPrice) {
+        return {
+          value: {
+            centAmount:
+              taxedPrice.totalGross.centAmount,
+            currencyCode,
+            fractionDigits,
+          },
+        };
+      }
     },
     amount() {
       return this.me.activeCart.totalPrice;
